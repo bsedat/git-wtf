@@ -247,7 +247,6 @@ def show_relations b, all_branches
       if ahead.empty?
         puts "#{widget true, local_only} merged into #{name}"
       else
-        #behind = commits_between b[:local_branch], v
         puts "#{widget false, local_only} NOT merged into #{name} (#{ahead.size.pluralize 'commit'} ahead)"
         show_commits ahead unless $short
       end
